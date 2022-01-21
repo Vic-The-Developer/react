@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos&family=Space+Mono&family=Inter&family=Lato:wght@300&family=Ubuntu:ital,wght@1,300&display=swap');
+
+
+/*Home page*/
+.Container{
+    background-color: rgb(250, 249, 249);
+}
+.slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+}
+  
+.slide {
+    display: inline-block;
+    height: 550px;
+    width: 100%;
+    border-radius: 2px;
+    margin-right: 2px;
+}
+
+.slider{
+    height: 500px;
+    margin: 0 auto;
+    margin-Bottom: 10px;
+    position: relative;
+    padding-top: 2px;
+    max-width: 95%;
+    overflow: hidden;
+    box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.6);
+}
+
+.slideshowDots {
+    text-align: center;
+    position: absolute;
+    top: 91%;
+    left: 45%;
+}
+  
+.slideshowDot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 15px 7px 0px;
+    background-color: #c4c4c4;
+}
+  
+.slideshowDot.active {
+    background-color: grey
+}
+
+.stripLine{
+    background-color: rgb(4, 4, 34);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    background-attachment: fixed
+}
+.getStarted{
+    background-color: cyan;
+    color: black;
+    font-size: 18px;
+    border: none;
+    padding: 13px;
+    width: 10%;
+    border-radius: 15px;
+}
+.getStarted:hover{
+    background-color: rgb(2, 165, 165);
+}
+.p2 {
+    margin: 10px;
+    font-size: 13px;
+    font-family: Ubuntu;
+}
+
+.socialMedia{
+    background-color:rgb(43, 179, 133);
+    text-align: center;
+    padding: 30px;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.socialMedia a i{
+    font-size: 40px;
+    color: white;
+}
+
+
+/*Footer section*/
+footer{
+    color: white;
+    background-color: rgb(3, 88, 88);
+}
+.footer-copyright{
+    color: white;
+    background-color: rgb(3, 88, 88);
+}
+.links li a{
+    color: rgb(151, 151, 151);
+    text-decoration: none;
+}
+
+
+/*About Page*/
+
+@font-face {
+    font-family: Wonderland;
+    src: url('../fonts/Beyond\ Wonderland.ttf');
+}
+@font-face {
+    font-family: Nexa;
+    src: url('../fonts/NexaRustSlab-BlackShadow01.otf');
+}
+
+
+
+/*Contact Us page*/
+
+.heading{
+    text-align: center;
+    margin: 40px 0 50px 0;
+}
+.socials{
+    background-color: rgb(4, 4, 34);
+    text-align: center;
+    padding: 30px;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.socials a i{
+    font-size: 30px;
+    color: cyan;
+}
+.messageUs{
+    margin: auto;
+    margin-top: 40px;
+    width: 40%;
+    margin-bottom: 50px;
+}
+.buttonLink{
+    text-align: center;
+}
+
+
+/*Search page*/
+.searchFilter{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'lbFilter lbFilter'
+    'sBox filter';
+    position: sticky;
+    top: 60px;
+    z-index: 2;
+    background-color: rgb(248, 246, 246);
+}
+.sBox{
+    grid-area: sBox;
+    padding: 10px 10px 10px 10px;
+}
+.sBox input{
+    margin-left: 10px;
+    width: 80%;
+}
+.lbFilter{
+    grid-area: lbFilter;
+    padding: 0 0 10px 20px;
+    font-family: calibri;
+    font-size: 19px;
+    font-weight: bold;
+}
+.filter{
+    grid-area: filter;
+    display: flex;
+    justify-content: space-around;
+}
+.dropBtn1, .dropBtn2{
+    position: relative;
+    width: 250px;
+    text-align: left;
+    padding: 5px;
+    border: none;
+    background-color: cyan;
+}
+.dropBtn1 span, .dropBtn2 span{
+    position: absolute;
+    right: 10px;
+}
+.dropList1, .dropList2{
+    display: flex;
+    position: absolute;
+    flex-flow: column;
+    background-color: #f1f1f1;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropList1 a, .dropList2 a{
+    padding: 5px;
+}
+
+
+
+/*Account Page*/
+
+.acc{
+    background-color: rgb(240, 240, 240);
+}
+.acc::before{
+    content: " ";
+    clear: both;
+    display: table;
+}
+.acc::after{
+    content: " ";
+    clear: both;
+    display: table;
+}
+.profile{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+.accHead{
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgb(151, 151, 151);
+}
+.userN{
+    padding: 10px 0 20px 20px;
+}
+.logout{
+    border: none;
+    position: absolute;
+    right: 20px;
+    padding: 10px;
+    width: 10%;
+}
+.profile img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+
+/*View in detail*/
+
+
+
+
+/*Login Page*/
