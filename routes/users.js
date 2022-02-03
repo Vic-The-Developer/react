@@ -59,8 +59,8 @@ router.post('/register', function (req, res) {
 
     
 
-    console.log('Saved apartment successfully!!')
-    res.send('Saved apartment successfully!!')
+    console.log('Saved successfully!!')
+    res.send('Saved successfully!!')
 
 
 
