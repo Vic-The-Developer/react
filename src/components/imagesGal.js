@@ -4,15 +4,13 @@ export function ImagesGallery({images}){
     return(
         <div className="row pics">
             {
-                images.map((url)=>{
-                    return (
-                        <div className="col-sm-1">
-                            <div className="card">
-                                <img src={url} alt="pics"/>
-                            </div>
-                        </div>
-                    )
-                })
+                images.map((src, index) => (
+                    <div key={index} className="col-sm-1">
+                    <div className="card">
+                        <img src={src} alt="pics"/>
+                    </div>
+                </div>
+                ))
             }
         </div>
     )

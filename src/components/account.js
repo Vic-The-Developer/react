@@ -8,7 +8,7 @@ function Account(){
             <div className="profile">
                 <h5 className="accHead">Account</h5>
                 <div className="userN">Victor</div>
-                <img src={require('../imgs/1B.jpg')} alt="profilePic"/>
+                <img src={require('../imgs/about.jpeg')} alt="profilePic"/>
                 <button className="logout">Logout</button>
             </div>
         </div>

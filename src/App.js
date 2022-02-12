@@ -50,7 +50,7 @@ class App extends Component{
           <Route exact path='/search' component={Search}></Route>
           <Route exact path='/contact' component={Contact}></Route>
           <Route exact path='/view' component={View}></Route>
-          <Route exact path='/list-property' component={<Advertise/>}></Route>
+          <Route exact path='/list-property' component={Advertise}></Route>
           <Route exact path='/login' component={Login}></Route>
           <PrivateRoute exact path="/account" component={Account}/>
         </Switch>

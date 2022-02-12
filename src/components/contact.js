@@ -23,7 +23,7 @@ class Contact extends React.Component {
                       <i class="fa fa-map-marker-alt"></i>
                   </a>
               </div>
-             <form onSubmit={} className="messageUs">
+             <form className="messageUs">
                     <div class="mb-3">
                         <label for="fullName" class="form-label">Full Name</label>
                         <input type="text" class="form-control" id="fullName" ref={this.nameInputRef}/>
