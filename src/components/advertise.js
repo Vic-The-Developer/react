@@ -5,24 +5,30 @@ import './comp.css';
 
 function Advertise(){
 
-    //file uploads
-    const [photos, updatePhotos] = useState([]);
+    //file preview
+    const [photos, updatePhotos] = useState(null);
+    //for upload
+    const [photos2, updatePhotos2] = useState(null);
     const _onchange = (e) =>{
         const selectedFiles =[];
+        const selectedFiles2 = [];
         const targetFiles =e.target.files;
         const targetFilesObject= [...targetFiles];
         targetFilesObject.map((file)=>{
-            return selectedFiles.push(URL.createObjectURL(file))
+            selectedFiles.push(URL.createObjectURL(file));
+            selectedFiles2.push(file);
         })
         updatePhotos(selectedFiles);
+        updatePhotos2(selectedFiles2);
     }
     const handleSubmit = (e) =>{
         e.preventDefault();
-        alert(arr1 +":" +arr2 +":" +arr3);
 
         //submit for backend validation
         const loginFormData = new FormData();
-        loginFormData.append("image", photos);
+        for (const file of photos2) {
+                loginFormData.append('files', file)
+        }
         const headers = {
             headers: {
                 "Content-Type": "multipart/form-data"
