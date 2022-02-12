@@ -15,7 +15,7 @@ router.use(bodyParser.json());
 // storage of pics
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
-      callback(null, './public/apartment_media/'+user._id);
+      callback(null, '/image');
     },
     filename: function (req, file, callback) {
       callback(null, file.fieldname + '-' + Date.now());
@@ -27,21 +27,21 @@ var storage = multer.diskStorage({
  */
 router.post('/register', function (req, res) {
 
-    var photos = req.body.image;
+    var photos = req.body.files;
 
     console.log(photos);
 
     // storage of pics
     var storage = multer.diskStorage({
         destination: function (req, file, callback) {
-        callback(null,'images/');
+        callback(null,'/images/');
         },
         filename: function (req, file, callback) {
         callback(null, file.fieldname + '-' + Date.now())+ path.extname(file.originalname);
         }
     });
 
-    var upload = multer({ storage : storage }).array(photos);
+    var upload = multer({ storage : storage }).array('files');
 
     if (!fs.existsSync(dir)){
         var dir ='images/';
